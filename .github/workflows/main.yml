@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: octocat/hello-world-javascript-action@v1.1
+        uses: julien51/token-gated-commit-action@v1.1
         with:
           who-to-greet: 'Julien'
       # Use the output from the `hello` step
