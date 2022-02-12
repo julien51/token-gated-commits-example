@@ -1,15 +1,13 @@
-on: [push]
+on: 
+  pull_request: 
+    types: [opened, edited, reopened, ready_for_review]
+
 
 jobs:
-  hello_world_job:
+  check-signer:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Check membership status
     steps:
-      - name: Hello world action step
-        id: hello
-        uses: julien51/token-gated-commit-action@v1.1
+      - uses: julien51/token-gated-commit-action@v1.1
         with:
-          who-to-greet: 'Julien'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          locks: '[{"address": "0x0759070d28F788947a99828b1226b930C970027F", "network": 4}, {"address": "0x1206b31eEd5Ceb34E91f53249339Ae221e673177", "network": 4}]'
