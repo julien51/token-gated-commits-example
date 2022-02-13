@@ -1,6 +1,7 @@
-# token-gated-commits-example
+# Example of repo using the token gating action!
 
-This is an example of a repo for which all PR are automatically merged once all checks pass AND that has a check to verify that the person submitting the PR has a valid membership using Unlock!
+This repo is an example of the [token-gating Github action](https://github.com/julien51/token-gated-commit-action).
+
+You are welcome to open a pull-request to try things out :)
 
 
-Another PR to update the README.
